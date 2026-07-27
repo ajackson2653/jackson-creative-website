@@ -17,36 +17,32 @@ Hosting: **Vercel** · Source control: **GitHub** · Local editing: this folder 
 - A GitHub account and a Vercel account (log into Vercel with your GitHub account for the smoothest flow).
 - Optional but handy: the GitHub CLI (`brew install gh`) and the Vercel CLI (`npm i -g vercel`).
 
-### 1. Initialize the Git repo (run these on your Mac)
-Open Terminal and run:
+### 1. The repo is already initialized and committed
+The setup tool already ran `git init` and made the first commit on the `main` branch, so you can skip straight to pushing. Confirm from Terminal:
 
 ```bash
 cd "$HOME/Documents/Claude/Projects/Jackson Creative Website"
-rm -rf .git                 # clears a partial repo left by the setup tool; safe to run
-git init
-git branch -M main
-git add -A
-git commit -m "Initial commit: Jackson Creative + Jackson Insight website"
-git log --oneline           # confirm you see your commit
+git log --oneline
 ```
 
-> Note: the assistant pre-staged everything and even attempted the first commit, but the synced folder wouldn't let it clean up Git's lock files. The `rm -rf .git` above wipes that partial repo so you start clean — all your website files, `.gitignore`, `vercel.json`, and this README are untouched.
+You should see the "Initial commit" line. If you ever need to start the history over, run `rm -rf .git` then `git init && git add -A && git commit -m "Initial commit"`.
+
+Paste one command at a time. Do not paste the explanatory notes — only the lines inside the grey code boxes.
 
 ### 2. Create the GitHub repository and push
 
-**Option A — using the GitHub CLI (easiest):**
+**Option A — manually (no extra tools needed):**
+1. Go to https://github.com/new and create a new **empty** repo named `jackson-creative-website`. Leave "Add a README", ".gitignore", and "license" all **unchecked** — this folder already has them.
+2. Then, from Terminal in this folder, replace `YOUR_USERNAME` with your GitHub username and run:
 ```bash
-gh auth login          # once, follow the prompts
-gh repo create jackson-creative-website --private --source=. --remote=origin --push
-```
-
-**Option B — manually:**
-1. On github.com, create a new **empty** repo named `jackson-creative-website` (no README/.gitignore — this folder already has them).
-2. Then, from Terminal in this folder:
-```bash
-git branch -M main
 git remote add origin https://github.com/YOUR_USERNAME/jackson-creative-website.git
 git push -u origin main
+```
+
+**Option B — using the GitHub CLI (optional):** if you'd rather not use the website, install the CLI first with `brew install gh` (requires Homebrew), then:
+```bash
+gh auth login
+gh repo create jackson-creative-website --private --source=. --remote=origin --push
 ```
 
 ### 3. Import the repo into Vercel
