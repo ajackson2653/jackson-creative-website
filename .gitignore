@@ -23,3 +23,8 @@ yarn-error.log*
 
 # Logs
 *.log
+
+# Unused uncompressed source images (superseded by -web compressed versions)
+assets/work/acap.png
+assets/work/charity-case.jpg
+assets/work/chamber-web.jpg
