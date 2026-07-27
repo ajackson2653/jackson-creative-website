@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Text Sign-Up — Jackson Insight</title>
+<meta name="description" content="Sign up to receive survey invitation and reminder text messages from Jackson Insight. Message and data rates may apply. Reply STOP to opt out." />
+<meta name="robots" content="index, follow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body class="theme-insight">
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Jackson Insight home">
+      <span class="logo-badge"><img src="../assets/jackson-insight-logo.png" alt="Jackson Insight" /></span>
+    </a>
+    <div class="brand-switch" role="group" aria-label="Switch between Jackson companies">
+      <a class="bs-opt" data-brand="creative" href="../index.html"><span class="dot"></span>Creative</a>
+      <a class="bs-opt active" data-brand="insight" href="index.html" aria-current="page"><span class="dot"></span>Insight</a>
+    </div>
+    <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html" class="btn btn-primary">Back to homepage <span class="arrow">→</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow on-dark reveal">Text sign-up</span>
+    <h1 class="reveal d1">Get survey texts from Jackson Insight.</h1>
+    <p class="lead reveal d2">Sign up to receive survey invitations and reminders by text. It's quick, and you can opt out anytime by replying STOP.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap" style="max-width:720px;">
+    <div class="form-card reveal">
+      <!--
+        SMS SIGN-UP FORM (10DLC compliant layout)
+        • Mobile Phone is the only REQUIRED field.
+        • The SMS opt-in checkbox is intentionally OPTIONAL (no "required" attribute) so opt-in is never forced.
+        • Privacy Policy & Terms links point to privacy.html and terms.html.
+        • On submit the visitor is returned to the homepage.
+        To wire real submissions, add an endpoint (e.g. Formspree) to the form's action; the page will still redirect home.
+      -->
+      <form id="sms-signup" action="index.html" method="get" novalidate>
+        <div class="field-row">
+          <div class="field">
+            <label for="first">First name</label>
+            <input id="first" name="first" type="text" autocomplete="given-name" placeholder="Optional" />
+          </div>
+          <div class="field">
+            <label for="last">Last name</label>
+            <input id="last" name="last" type="text" autocomplete="family-name" placeholder="Optional" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="phone">Mobile phone <span aria-hidden="true">*</span></label>
+          <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel"
+                 required pattern="[0-9()+\-\s]{7,}" placeholder="(828) 555-0100" />
+          <p class="form-note">Required. U.S. mobile number for survey texts.</p>
+        </div>
+
+        <!-- Opt-in checkbox sitting right beside the consent text; checkbox is OPTIONAL -->
+        <div class="field">
+          <label style="display:flex; gap:.75rem; align-items:flex-start; cursor:pointer; font-weight:400;">
+            <input id="sms_optin" name="sms_optin" type="checkbox" value="yes"
+                   style="margin-top:.35rem; width:20px; height:20px; flex:none; accent-color:var(--blue);" />
+            <span style="font-size:.92rem; line-height:1.6; color:var(--ink);">
+              By submitting this form and signing up for texts, you consent to receive messages from Jackson Insight at the number provided, including messages sent by autodialer. Consent is not a condition of purchase. Message &amp; data rates may apply. Message frequency varies. Unsubscribe at any time by replying STOP. Reply HELP for help.
+              <a href="privacy.html">Privacy Policy</a> &amp; <a href="terms.html">Terms</a>.
+            </span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Sign up for texts <span class="arrow">→</span></button>
+        <p class="form-note" style="text-align:center; margin-top:1rem;"><a href="index.html" style="color:var(--blue);">← Back to homepage</a></p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="brand" href="index.html"><span class="logo-badge"><img src="../assets/jackson-insight-logo.png" alt="Jackson Insight" /></span></a>
+        <p class="footer-blurb">We provide the insight, so you can better understand your customers, employees, or the community around you.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a><a href="services.html">Services</a><a href="work.html">Work</a><a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="text-signup.html">Text Sign-Up</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Jackson Insight. All rights reserved.</span>
+      <span><a href="privacy.html" style="color:rgba(255,255,255,.6);">Privacy</a> &nbsp;·&nbsp; <a href="terms.html" style="color:rgba(255,255,255,.6);">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/script.js"></script>
+<script>
+  // Return to the homepage on submit (front-end only; validates the required phone field first).
+  document.getElementById("sms-signup").addEventListener("submit", function (e) {
+    var phone = document.getElementById("phone");
+    if (!phone.value.trim()) { e.preventDefault(); phone.focus(); phone.reportValidity && phone.reportValidity(); return; }
+    e.preventDefault();
+    window.location.href = "index.html";
+  });
+</script>
+</body>
+</html>

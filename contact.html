@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact — Jackson Creative</title>
+<meta name="description" content="Start a conversation with Jackson Creative. Tell us about your project — marketing, video, web, or custom smart tools. Hickory, NC." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<header class="site-header over-dark">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Jackson Creative home">
+      <img class="logo-img" src="assets/jackson-creative-logo.png" alt="Jackson Creative" />
+    </a>
+    <div class="brand-switch" role="group" aria-label="Switch between Jackson companies">
+      <a class="bs-opt active" data-brand="creative" href="index.html" aria-current="page"><span class="dot"></span>Creative</a>
+      <a class="bs-opt" data-brand="insight" href="insight/index.html"><span class="dot"></span>Insight</a>
+    </div>
+    <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="contact.html" class="btn btn-primary">Start a conversation <span class="arrow">→</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow on-dark reveal">Contact</span>
+    <h1 class="reveal d1">Let's start a conversation.</h1>
+    <p class="lead reveal d2">Tell us about your project and let's begin. We'll help make a lasting impression.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="contact-grid">
+
+      <!-- Info -->
+      <div class="contact-info reveal">
+        <div class="item">
+          <div class="k">Headquarters</div>
+          <a class="v" href="https://maps.google.com/?q=219+1st+Ave+SW+Hickory+NC+28602" target="_blank" rel="noopener">219 1st Ave SW<br>Hickory, NC 28602</a>
+        </div>
+        <div class="item">
+          <div class="k">Phone</div>
+          <a class="v" href="tel:828-328-9238">828-328-9238</a>
+        </div>
+        <div class="item">
+          <div class="k">Email</div>
+          <a class="v" href="mailto:info@thejacksoncreative.com">info@thejacksoncreative.com</a>
+        </div>
+        <div class="item">
+          <div class="k">Follow along</div>
+          <div class="socials">
+            <a href="https://www.facebook.com/hkycreative/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h2.7l.4-3H13V9.2c0-.9.3-1.5 1.6-1.5H16V5.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.7 1.4-3.7 3.9V11H7.5v3H10v8h3z"/></svg></a>
+            <a href="https://www.linkedin.com/company/jackson-creative/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 7A1.94 1.94 0 113 7a1.94 1.94 0 013.94 0zM3.3 8.5h3.3V21H3.3V8.5zM9 8.5h3.16v1.7h.05c.44-.83 1.5-1.7 3.1-1.7 3.3 0 3.9 2.17 3.9 5V21h-3.3v-5.3c0-1.26 0-2.9-1.76-2.9s-2.03 1.37-2.03 2.8V21H9V8.5z"/></svg></a>
+            <a href="https://www.instagram.com/hkycreative/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://www.youtube.com/channel/UCBvc6t34RGQKwMXpYL2h0Vg/" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12s0-3.3-.4-4.9a2.5 2.5 0 00-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.3A2.5 2.5 0 002.4 7.1C2 8.7 2 12 2 12s0 3.3.4 4.9a2.5 2.5 0 001.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.3a2.5 2.5 0 001.8-1.8C22 15.3 22 12 22 12zm-12 3.2V8.8L15.5 12 10 15.2z"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="form-card reveal d1">
+        <!--
+          TO ACTIVATE THE FORM:
+          1. Create a free endpoint at https://formspree.io (or similar) for info@thejacksoncreative.com
+          2. Replace the action URL below with your endpoint, e.g. action="https://formspree.io/f/abcdwxyz"
+          Until then, the form gracefully opens the visitor's email app pre-filled. Nothing breaks.
+        -->
+        <form id="contact-form" action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST">
+          <div class="field-row">
+            <div class="field">
+              <label for="name">Name *</label>
+              <input id="name" name="name" type="text" autocomplete="name" required placeholder="Your name" />
+            </div>
+            <div class="field">
+              <label for="email">Email *</label>
+              <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@company.com" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="service">What can we help with?</label>
+            <select id="service" name="service">
+              <option value="">Select an area…</option>
+              <option>Marketing Services</option>
+              <option>Video Production</option>
+              <option>Website Development</option>
+              <option>Smart Tools</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Tell us about your project *</label>
+            <textarea id="message" name="message" required placeholder="A few sentences on what you're trying to accomplish…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send message <span class="arrow">→</span></button>
+          <p class="form-note">Prefer email? Reach us anytime at info@thejacksoncreative.com.</p>
+          <div class="form-status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="family-strip">
+      <div class="fs-text"><strong>Jackson Creative</strong> &amp; <strong>Jackson Insight</strong> — two parts of one company. Storytelling and survey research under one roof.</div>
+      <a class="fs-link" href="insight/index.html">Visit Jackson Insight <span class="arrow">→</span></a>
+    </div>
+    <div class="footer-top">
+      <div>
+        <a class="brand" href="index.html"><img class="logo-img" src="assets/jackson-creative-logo.png" alt="Jackson Creative" /></a>
+        <p class="footer-blurb">A digital-first creative agency helping organizations communicate, brand themselves, and tell their story.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a><a href="services.html">Services</a><a href="work.html">Work</a><a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Get in touch</h4>
+        <a href="tel:828-328-9238">828-328-9238</a>
+        <a href="mailto:info@thejacksoncreative.com">info@thejacksoncreative.com</a>
+        <a href="https://maps.google.com/?q=219+1st+Ave+SW+Hickory+NC+28602" target="_blank" rel="noopener">219 1st Ave SW, Hickory, NC</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Jackson Creative. All rights reserved.</span>
+      <div class="socials">
+        <a href="https://www.facebook.com/hkycreative/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h2.7l.4-3H13V9.2c0-.9.3-1.5 1.6-1.5H16V5.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.7 1.4-3.7 3.9V11H7.5v3H10v8h3z"/></svg></a>
+        <a href="https://www.linkedin.com/company/jackson-creative/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 7A1.94 1.94 0 113 7a1.94 1.94 0 013.94 0zM3.3 8.5h3.3V21H3.3V8.5zM9 8.5h3.16v1.7h.05c.44-.83 1.5-1.7 3.1-1.7 3.3 0 3.9 2.17 3.9 5V21h-3.3v-5.3c0-1.26 0-2.9-1.76-2.9s-2.03 1.37-2.03 2.8V21H9V8.5z"/></svg></a>
+        <a href="https://www.instagram.com/hkycreative/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.youtube.com/channel/UCBvc6t34RGQKwMXpYL2h0Vg/" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12s0-3.3-.4-4.9a2.5 2.5 0 00-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.3A2.5 2.5 0 002.4 7.1C2 8.7 2 12 2 12s0 3.3.4 4.9a2.5 2.5 0 001.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.3a2.5 2.5 0 001.8-1.8C22 15.3 22 12 22 12zm-12 3.2V8.8L15.5 12 10 15.2z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>

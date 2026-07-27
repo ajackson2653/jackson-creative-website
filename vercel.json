@@ -1,0 +1,37 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "^(www\\.)?jacksoninsight\\.com$" }],
+      "destination": "/insight",
+      "permanent": false
+    },
+    {
+      "source": "/text-signup",
+      "has": [{ "type": "host", "value": "^(www\\.)?jacksoninsight\\.com$" }],
+      "destination": "/insight/text-signup",
+      "permanent": false
+    },
+    {
+      "source": "/privacy",
+      "has": [{ "type": "host", "value": "^(www\\.)?jacksoninsight\\.com$" }],
+      "destination": "/insight/privacy",
+      "permanent": false
+    },
+    {
+      "source": "/terms",
+      "has": [{ "type": "host", "value": "^(www\\.)?jacksoninsight\\.com$" }],
+      "destination": "/insight/terms",
+      "permanent": false
+    },
+    {
+      "source": "/contact",
+      "has": [{ "type": "host", "value": "^(www\\.)?jacksoninsight\\.com$" }],
+      "destination": "/insight/contact",
+      "permanent": false
+    }
+  ]
+}

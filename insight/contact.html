@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact — Jackson Insight</title>
+<meta name="description" content="Start a conversation with Jackson Insight. Tell us what you need to understand and we'll design the survey that answers it. Hickory, NC." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body class="theme-insight">
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Jackson Insight home">
+      <span class="logo-badge"><img src="../assets/jackson-insight-logo.png" alt="Jackson Insight" /></span>
+    </a>
+    <div class="brand-switch" role="group" aria-label="Switch between Jackson companies">
+      <a class="bs-opt" data-brand="creative" href="../index.html"><span class="dot"></span>Creative</a>
+      <a class="bs-opt active" data-brand="insight" href="index.html" aria-current="page"><span class="dot"></span>Insight</a>
+    </div>
+    <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="contact.html" class="btn btn-primary">Start a conversation <span class="arrow">→</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow on-dark reveal">Contact</span>
+    <h1 class="reveal d1">Ask the questions. Let's begin.</h1>
+    <p class="lead reveal d2">Tell us about your project and what you need to understand — we'll take it from there.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="contact-grid">
+
+      <div class="contact-info reveal">
+        <div class="item">
+          <div class="k">Headquarters</div>
+          <a class="v" href="https://maps.google.com/?q=219+1st+Ave+SW+Hickory+NC+28602" target="_blank" rel="noopener">219 1st Ave SW<br>Hickory, NC 28602</a>
+        </div>
+        <div class="item">
+          <div class="k">Phone</div>
+          <a class="v" href="tel:828-328-9238">828-328-9238</a>
+        </div>
+        <div class="item">
+          <div class="k">Email</div>
+          <a class="v" href="mailto:ajackson@jacksoninsight.com">ajackson@jacksoninsight.com</a>
+        </div>
+        <div class="item">
+          <div class="k">Our sibling studio</div>
+          <a class="v" href="../index.html">Jackson Creative →</a>
+        </div>
+      </div>
+
+      <div class="form-card reveal d1">
+        <!--
+          TO ACTIVATE THE FORM:
+          1. Create a free endpoint at https://formspree.io (or similar) for ajackson@jacksoninsight.com
+          2. Replace the action URL below with your endpoint.
+          Until then, the form gracefully opens the visitor's email app pre-filled (data-mailto controls the address).
+        -->
+        <form id="contact-form" action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST" data-mailto="ajackson@jacksoninsight.com">
+          <div class="field-row">
+            <div class="field">
+              <label for="name">Name *</label>
+              <input id="name" name="name" type="text" autocomplete="name" required placeholder="Your name" />
+            </div>
+            <div class="field">
+              <label for="email">Email *</label>
+              <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@company.com" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="service">What do you need to understand?</label>
+            <select id="service" name="service">
+              <option value="">Select a survey type…</option>
+              <option>Employee Engagement Surveys</option>
+              <option>Customer Experience Surveys</option>
+              <option>Community Awareness Surveys</option>
+              <option>Legal Case Awareness Surveys</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Tell us about your project *</label>
+            <textarea id="message" name="message" required placeholder="A few sentences on what you're trying to learn…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send message <span class="arrow">→</span></button>
+          <p class="form-note">Prefer email? Reach us anytime at ajackson@jacksoninsight.com.</p>
+          <div class="form-status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="family-strip">
+      <div class="fs-text"><strong>Jackson Insight</strong> &amp; <strong>Jackson Creative</strong> — two parts of one company. Survey research and storytelling under one roof.</div>
+      <a class="fs-link" href="../index.html">Visit Jackson Creative <span class="arrow">→</span></a>
+    </div>
+    <div class="footer-top">
+      <div>
+        <a class="brand" href="index.html"><span class="logo-badge"><img src="../assets/jackson-insight-logo.png" alt="Jackson Insight" /></span></a>
+        <p class="footer-blurb">We provide the insight, so you can better understand your customers, employees, or the community around you.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a><a href="services.html">Services</a><a href="work.html">Work</a><a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Get in touch</h4>
+        <a href="tel:828-328-9238">828-328-9238</a>
+        <a href="mailto:ajackson@jacksoninsight.com">ajackson@jacksoninsight.com</a>
+        <a href="https://maps.google.com/?q=219+1st+Ave+SW+Hickory+NC+28602" target="_blank" rel="noopener">219 1st Ave SW, Hickory, NC</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Jackson Insight. All rights reserved.</span>
+      <span style="display:flex; gap:1.1rem;"><a href="privacy.html" style="color:rgba(255,255,255,.6);">Privacy</a><a href="terms.html" style="color:rgba(255,255,255,.6);">Terms</a><a href="text-signup.html" style="color:rgba(255,255,255,.6);">Text Sign-Up</a></span>
+      <div class="socials">
+        <a href="https://www.linkedin.com/company/jackson-creative/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 7A1.94 1.94 0 113 7a1.94 1.94 0 013.94 0zM3.3 8.5h3.3V21H3.3V8.5zM9 8.5h3.16v1.7h.05c.44-.83 1.5-1.7 3.1-1.7 3.3 0 3.9 2.17 3.9 5V21h-3.3v-5.3c0-1.26 0-2.9-1.76-2.9s-2.03 1.37-2.03 2.8V21H9V8.5z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/script.js"></script>
+</body>
+</html>
