@@ -301,6 +301,15 @@ h1, h2, h3, h4 {
   background-image: linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px);
   background-size: 38px 38px;
 }
+/* full-card photo background (with a dark scrim so the caption stays legible) */
+.work-card .ph.photo {
+  background-image:
+    linear-gradient(to top, rgba(8,12,22,.90) 0%, rgba(8,12,22,.42) 42%, rgba(8,12,22,.28) 100%),
+    var(--img);
+  background-size: cover; background-position: center;
+}
+.work-card .ph.photo.top { background-position: top center; }
+.work-card .ph.photo::after { display: none; }
 .work-card .meta { position: absolute; inset: auto 0 0 0; z-index: 2; padding: 1.5rem; color: #fff; }
 .work-card .cat { font-family: var(--font-head); font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--blue-bright); }
 .work-card h3 { color: #fff; font-size: 1.35rem; margin-top: .35rem; }
