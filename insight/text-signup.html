@@ -55,7 +55,8 @@
         • On submit the visitor is returned to the homepage.
         To wire real submissions, add an endpoint (e.g. Formspree) to the form's action; the page will still redirect home.
       -->
-      <form id="sms-signup" action="index.html" method="get" novalidate>
+      <form id="sms-signup" action="https://formspree.io/f/mwvgderj" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="New SMS text opt-in — Jackson Insight" />
         <div class="field-row">
           <div class="field">
             <label for="first">First name</label>
@@ -121,12 +122,14 @@
 
 <script src="../assets/script.js"></script>
 <script>
-  // Return to the homepage on submit (front-end only; validates the required phone field first).
+  // Send the sign-up to Formspree (emails ajackson@jacksoninsight.com), then return to the homepage.
   document.getElementById("sms-signup").addEventListener("submit", function (e) {
-    var phone = document.getElementById("phone");
-    if (!phone.value.trim()) { e.preventDefault(); phone.focus(); phone.reportValidity && phone.reportValidity(); return; }
     e.preventDefault();
-    window.location.href = "index.html";
+    var form = e.target;
+    var phone = document.getElementById("phone");
+    if (!phone.value.trim()) { phone.focus(); if (phone.reportValidity) phone.reportValidity(); return; }
+    fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } })
+      .finally(function () { window.location.href = "index.html"; });
   });
 </script>
 </body>
