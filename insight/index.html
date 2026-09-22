@@ -32,6 +32,7 @@
         <li><a href="/insight/services.html">Services</a></li>
         <li><a href="/insight/work.html">Work</a></li>
         <li><a href="/insight/contact.html">Contact</a></li>
+        <li><a href="https://files.thejacksoncreative.com" target="_blank" rel="noopener">Files</a></li>
         <li><a href="/insight/contact.html" class="btn btn-primary">Start a conversation <span class="arrow">→</span></a></li>
       </ul>
     </nav>
@@ -41,6 +42,29 @@
 <main>
 <!-- ===== Hero ===== -->
 <section class="hero">
+  <!--
+    HERO MOSAIC (4×3) — Insight
+    12 dimmed still tiles behind the hero (no video on this side). Placeholders use the
+    abstract data-viz set in /assets/insight-grid/ (tile1–tile6.svg), on-brand for survey work.
+    Swap the --img url on any .hero-tile to use real imagery later. Positions shuffle on load.
+  -->
+  <div class="hero-media" aria-hidden="true">
+    <div class="hero-grid">
+      <div class="hero-tile" style="--img:url('/assets/insight-grid/tile1.svg')"></div>
+      <div class="hero-tile" style="--img:url('/assets/insight-grid/tile4.svg')"></div>
+      <div class="hero-tile" style="--img:url('/assets/insight-grid/tile2.svg')"></div>
+      <div class="hero-tile" style="--img:url('/assets/insight-grid/tile6.svg')"></div>
+      <div class="hero-tile" style="--img:url('/assets/insight-grid/tile3.svg')"></div>
+      <div class="hero-tile" style="--img:url('/assets/insight-grid/tile5.svg')"></div>
+      <div class="hero-tile" style="--img:url('/assets/insight-grid/tile2.svg')"></div>
+      <div class="hero-tile" style="--img:url('/assets/insight-grid/tile6.svg')"></div>
+      <div class="hero-tile" style="--img:url('/assets/insight-grid/tile1.svg')"></div>
+      <div class="hero-tile" style="--img:url('/assets/insight-grid/tile3.svg')"></div>
+      <div class="hero-tile" style="--img:url('/assets/insight-grid/tile5.svg')"></div>
+      <div class="hero-tile" style="--img:url('/assets/insight-grid/tile4.svg')"></div>
+    </div>
+    <div class="hero-scrim"></div>
+  </div>
   <div class="wrap">
     <span class="eyebrow on-dark reveal">Survey research &amp; analysis</span>
     <h1 class="reveal d1">Ask the questions.<br>Understand the <span class="accent">answers.</span></h1>
@@ -173,7 +197,7 @@
         <span class="eyebrow">Selected work</span>
         <h2>Insight that drove a decision.</h2>
       </div>
-      <a href="/insight/work.html" class="btn btn-outline">View all work <span class="arrow">→</span></a>
+      <a href="/insight/work.html" class="btn btn-outline">View more work <span class="arrow">→</span></a>
     </div>
     <div class="grid cols-3">
       <a href="/insight/work.html" class="work-card reveal"><div class="ph"></div><span class="badge">Employee</span><div class="meta"><div class="cat">Employee Engagement</div><h3>Project Name</h3><p>Swap in an engagement study and its result.</p></div></a>

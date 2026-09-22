@@ -83,6 +83,60 @@
     });
   }
 
+  /* ---- Hero mosaic: shuffle tile positions; respect reduced motion ---- */
+  var heroGrid = document.querySelector(".hero-grid");
+  if (heroGrid) {
+    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    // Fisher–Yates shuffle so the animating tiles land in different cells each visit.
+    var tiles = Array.prototype.slice.call(heroGrid.children);
+    for (var i = tiles.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = tiles[i]; tiles[i] = tiles[j]; tiles[j] = tmp;
+    }
+    tiles.forEach(function (t) { heroGrid.appendChild(t); });
+    if (reduceMotion) {
+      heroGrid.querySelectorAll("video").forEach(function (v) {
+        v.removeAttribute("autoplay");
+        try { v.pause(); } catch (e) {}
+      });
+    }
+  }
+
+  /* ---- Video lightbox (work cards with class .js-video) ---- */
+  var vModal = document.getElementById("videoModal");
+  if (vModal) {
+    var vFrame = document.getElementById("videoModalFrame");
+    var openVideo = function (id) {
+      vFrame.innerHTML =
+        '<iframe src="https://www.youtube-nocookie.com/embed/' + id +
+        '?autoplay=1&rel=0" title="Video player" ' +
+        'allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+      vModal.classList.add("open");
+      vModal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("modal-open");
+    };
+    var closeVideo = function () {
+      vModal.classList.remove("open");
+      vModal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("modal-open");
+      vFrame.innerHTML = ""; // removing the iframe stops playback
+    };
+    document.querySelectorAll("a.js-video").forEach(function (a) {
+      a.addEventListener("click", function (ev) {
+        var id = a.getAttribute("data-video");
+        if (!id) return; // no id -> let the href open YouTube as a fallback
+        ev.preventDefault();
+        openVideo(id);
+      });
+    });
+    vModal.querySelectorAll("[data-close]").forEach(function (el) {
+      el.addEventListener("click", closeVideo);
+    });
+    document.addEventListener("keydown", function (ev) {
+      if (ev.key === "Escape" && vModal.classList.contains("open")) closeVideo();
+    });
+  }
+
   /* ---- Footer year ---- */
   var yr = document.querySelector("#year");
   if (yr) yr.textContent = new Date().getFullYear();

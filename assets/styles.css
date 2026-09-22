@@ -209,6 +209,22 @@ h1, h2, h3, h4 {
   background: linear-gradient(180deg, rgba(10,15,28,.68) 0%, rgba(10,15,28,.74) 55%, rgba(10,15,28,.86) 100%);
 }
 @media (prefers-reduced-motion: reduce) { .hero-video { display: none; } }
+
+/* Hero mosaic (4×3): a few tiles animate, the rest are stills — all dimmed by the scrim above */
+.hero-grid {
+  position: absolute; inset: 0; z-index: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 4px; background: var(--black);
+  filter: brightness(.85) saturate(.95);
+}
+.hero-tile {
+  position: relative; overflow: hidden; min-width: 0; min-height: 0;
+  background: #2a0813 var(--img, none) center / cover no-repeat;
+}
+video.hero-tile { width: 100%; height: 100%; object-fit: cover; display: block; }
+
 .hero .wrap { position: relative; z-index: 2; }
 .hero h1 {
   color: #fff; font-size: clamp(2.6rem, 7vw, 5.4rem); font-weight: 600; max-width: 16ch;
@@ -315,6 +331,33 @@ h1, h2, h3, h4 {
 .work-card h3 { color: #fff; font-size: 1.35rem; margin-top: .35rem; }
 .work-card p { color: rgba(255,255,255,.7); font-size: .9rem; margin-top: .35rem; }
 .work-card .badge { position: absolute; top: 1.2rem; right: 1.2rem; z-index: 2; background: rgba(255,255,255,.12); backdrop-filter: blur(6px); color: #fff; font-size: .72rem; font-family: var(--font-head); letter-spacing: .12em; text-transform: uppercase; padding: .35rem .7rem; border-radius: 100px; }
+
+/* Play affordance on video work cards */
+.work-card.js-video { cursor: pointer; }
+.work-card .play-btn {
+  position: absolute; z-index: 2; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 64px; height: 64px; border-radius: 50%;
+  background: rgba(0,0,0,.5); border: 2px solid rgba(255,255,255,.9);
+  display: grid; place-items: center;
+  transition: transform .3s var(--ease), background .3s var(--ease);
+}
+.work-card .play-btn::after {
+  content: ""; width: 0; height: 0; margin-left: 4px;
+  border-style: solid; border-width: 10px 0 10px 17px;
+  border-color: transparent transparent transparent #fff;
+}
+.work-card.js-video:hover .play-btn { transform: translate(-50%, -50%) scale(1.08); background: rgba(0,0,0,.7); }
+
+/* Video lightbox */
+.video-modal { position: fixed; inset: 0; z-index: 1000; display: none; }
+.video-modal.open { display: block; }
+.video-modal__backdrop { position: absolute; inset: 0; background: rgba(5,8,16,.85); backdrop-filter: blur(4px); }
+.video-modal__dialog { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: min(92vw, 1100px); }
+.video-modal__frame { position: relative; width: 100%; aspect-ratio: 16/9; background: #000; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.video-modal__frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-modal__close { position: absolute; top: -2.8rem; right: -.2rem; z-index: 2; background: none; border: 0; color: #fff; font-size: 2.2rem; line-height: 1; cursor: pointer; padding: .1rem .5rem; }
+.video-modal__close:hover { color: var(--blue-bright); }
+body.modal-open { overflow: hidden; }
 
 /* ============================================================
    CTA band
@@ -447,7 +490,7 @@ h1, h2, h3, h4 {
   color: var(--gray-light); font-family: var(--font-head); font-weight: 500; font-size: .72rem;
   letter-spacing: .16em; text-transform: uppercase; text-align: center; padding: .5rem;
 }
-.partner-logo img { max-height: 52px; width: auto; }
+.partner-logo img { max-height: 52px; max-width: 100%; width: auto; }
 .partner-card h3 { font-size: 1.18rem; }
 .partner-card p { margin-top: .45rem; color: var(--gray); font-size: .92rem; }
 .partner-card .plink {
